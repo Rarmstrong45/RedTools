@@ -1,131 +1,139 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { BarChart3, TrendingUp, MapPin, Users, CheckCircle, ArrowRight, Home, Target, PieChart } from "lucide-react";
+import { BarChart3, TrendingUp, MapPin, Users, CheckCircle, ArrowRight, Home, Target, PieChart, Menu } from "lucide-react";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <img
-                src="https://cdn.builder.io/api/v1/assets/64496b1e452044d89561b3b5a5c1ff83/redtools-logo-257438?format=webp&width=800"
-                alt="RedTools Logo"
-                className="h-20 w-auto"
+              <img 
+                src="https://cdn.builder.io/api/v1/assets/64496b1e452044d89561b3b5a5c1ff83/redtools-logo-257438?format=webp&width=800" 
+                alt="RedTools Logo" 
+                className="h-20 w-auto brightness-0 invert"
               />
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-redtools-red transition-colors">Features</a>
-              <a href="#about" className="text-gray-600 hover:text-redtools-red transition-colors">About</a>
-              <a href="#contact" className="text-gray-600 hover:text-redtools-red transition-colors">Contact</a>
-              <Button className="bg-redtools-red hover:bg-redtools-red-dark text-white">
-                Get Started
+            <div className="hidden lg:flex items-center space-x-8">
+              <a href="#features" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Analytics</a>
+              <a href="#about" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Insights</a>
+              <a href="#contact" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Reports</a>
+              <span className="text-gray-500">|</span>
+              <Button variant="ghost" className="text-white hover:bg-gray-800 border border-gray-700 rounded-full px-6">
+                Log in
               </Button>
+              <Button className="bg-redtools-red hover:bg-redtools-red-dark text-white rounded-full px-6">
+                Get started
+              </Button>
+            </div>
+            <div className="lg:hidden">
+              <Menu className="h-6 w-6 text-white" />
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Badge variant="outline" className="mb-6 border-redtools-red text-redtools-red">
-              Real Estate Intelligence Platform
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Find clarity in the{" "}
-              <span className="text-redtools-red">chaos</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Real estate markets are noisy - we help you tune in to what actually matters. 
-              We distill thousands of data points into actionable insights for buyers, investors, and agents.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-redtools-red hover:bg-redtools-red-dark text-white px-8 py-3">
-                Start Your Analysis
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-300 hover:border-redtools-red hover:text-redtools-red px-8 py-3">
-                View Demo
-              </Button>
-            </div>
-            <p className="text-sm text-gray-500">
-              <strong>No fluff. No hype. Just analytics.</strong>
-            </p>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-black to-redtools-red/20"></div>
+          {/* Geometric pattern overlay */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-10 w-32 h-32 border border-redtools-red/30 rotate-12"></div>
+            <div className="absolute top-40 right-20 w-24 h-24 border border-redtools-red/20 rotate-45"></div>
+            <div className="absolute bottom-40 left-1/4 w-20 h-20 border border-redtools-red/25 -rotate-12"></div>
+            <div className="absolute bottom-20 right-1/3 w-28 h-28 border border-redtools-red/15 rotate-30"></div>
           </div>
+        </div>
+        
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-8">
+            Find Clarity
+            <br />
+            <span className="text-redtools-red">in the Chaos</span>
+          </h1>
+          <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Turn real estate market noise into actionable insights with data-driven intelligence.
+          </p>
+          <Button 
+            size="lg" 
+            className="bg-redtools-red hover:bg-redtools-red-dark text-white text-lg px-12 py-4 rounded-full font-semibold"
+          >
+            Get started
+          </Button>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gray-50">
+      <section className="py-32 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Turn market chaos into high-confidence decisions
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              Real estate intelligence,
+              <br />
+              <span className="text-redtools-red">simplified</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Built by a team with 40+ years of experience in real estate and investment markets
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              40+ years of market experience distilled into powerful analytics tools
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-redtools-red/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <MapPin className="h-6 w-6 text-redtools-red" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+            <Card className="bg-gray-900 border-gray-800 p-8 hover:bg-gray-850 transition-colors">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-6">
+                  <div className="bg-redtools-red/20 p-3 rounded-lg mr-4">
+                    <MapPin className="h-8 w-8 text-redtools-red" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Neighborhood Analytics</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Neighborhood Analytics
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Zip-code level insights with granular market data
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  Zip-code level insights with granular market data that reveals hidden opportunities
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-redtools-red/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="h-6 w-6 text-redtools-red" />
+            <Card className="bg-gray-900 border-gray-800 p-8 hover:bg-gray-850 transition-colors">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-6">
+                  <div className="bg-redtools-red/20 p-3 rounded-lg mr-4">
+                    <BarChart3 className="h-8 w-8 text-redtools-red" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Proprietary Modeling</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Proprietary Modeling
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Vacancy, community debt load, and income velocity analysis
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  Advanced algorithms analyzing vacancy rates, debt loads, and income velocity
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-redtools-red/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="h-6 w-6 text-redtools-red" />
+            <Card className="bg-gray-900 border-gray-800 p-8 hover:bg-gray-850 transition-colors">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-6">
+                  <div className="bg-redtools-red/20 p-3 rounded-lg mr-4">
+                    <TrendingUp className="h-8 w-8 text-redtools-red" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Investor Intelligence</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Investor Reports
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Airbnb viability, risk scoring, and entertainment metrics
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  Airbnb viability scoring, risk analysis, and entertainment district mapping
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-redtools-red/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-redtools-red" />
+            <Card className="bg-gray-900 border-gray-800 p-8 hover:bg-gray-850 transition-colors">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-6">
+                  <div className="bg-redtools-red/20 p-3 rounded-lg mr-4">
+                    <Users className="h-8 w-8 text-redtools-red" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Lifestyle Matching</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Lifestyle Matching
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Perfect for relocating buyers, renters, and remote workers
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  Perfect location discovery for buyers, renters, and remote workers
                 </p>
               </CardContent>
             </Card>
@@ -133,71 +141,67 @@ export default function Index() {
         </div>
       </section>
 
-      {/* How We're Different */}
-      <section id="about" className="py-20 bg-white">
+      {/* Stats Section */}
+      <section className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                How we are <span className="text-redtools-red">different</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Whether you're buying a home, scaling a portfolio or advising clients, 
-                we help you know where, when and why to move. Ensure you have the data 
-                on your side for your next big decision.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-redtools-red mt-0.5 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">No sponsored cities</h3>
-                    <p className="text-gray-600 text-sm">Unbiased results based purely on data</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-redtools-red mt-0.5 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">No outdated census-only data</h3>
-                    <p className="text-gray-600 text-sm">Real-time market intelligence</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-redtools-red mt-0.5 mr-3 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">No recycled "best places" lists</h3>
-                    <p className="text-gray-600 text-sm">Customized insights that react to your specific needs</p>
-                  </div>
-                </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-redtools-red mb-2">40+</div>
+              <div className="text-gray-400 text-lg">Years Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-redtools-red mb-2">1000s</div>
+              <div className="text-gray-400 text-lg">Data Points</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-redtools-red mb-2">0</div>
+              <div className="text-gray-400 text-lg">Sponsored Results</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-redtools-red mb-2">100%</div>
+              <div className="text-gray-400 text-lg">Data Driven</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Differentiation Section */}
+      <section className="py-32 bg-gray-950">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              How we're <span className="text-redtools-red">different</span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+                <CheckCircle className="h-12 w-12 text-redtools-red mx-auto mb-6" />
+                <h3 className="text-xl font-bold text-white mb-4">No Sponsored Cities</h3>
+                <p className="text-gray-400">
+                  Unbiased results based purely on market data and analytics
+                </p>
               </div>
             </div>
             
-            <div className="relative">
-              <div className="bg-gradient-to-br from-redtools-red/10 to-redtools-red/5 rounded-2xl p-8">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <Home className="h-8 w-8 text-redtools-red mb-2" />
-                    <div className="text-2xl font-bold text-gray-900">40+</div>
-                    <div className="text-sm text-gray-600">Years Experience</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <Target className="h-8 w-8 text-redtools-red mb-2" />
-                    <div className="text-2xl font-bold text-gray-900">100%</div>
-                    <div className="text-sm text-gray-600">Data Driven</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <PieChart className="h-8 w-8 text-redtools-red mb-2" />
-                    <div className="text-2xl font-bold text-gray-900">1000s</div>
-                    <div className="text-sm text-gray-600">Data Points</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 shadow-sm">
-                    <BarChart3 className="h-8 w-8 text-redtools-red mb-2" />
-                    <div className="text-2xl font-bold text-gray-900">Real-time</div>
-                    <div className="text-sm text-gray-600">Insights</div>
-                  </div>
-                </div>
+            <div className="text-center">
+              <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+                <CheckCircle className="h-12 w-12 text-redtools-red mx-auto mb-6" />
+                <h3 className="text-xl font-bold text-white mb-4">Real-Time Data</h3>
+                <p className="text-gray-400">
+                  No outdated census information - live market intelligence
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+                <CheckCircle className="h-12 w-12 text-redtools-red mx-auto mb-6" />
+                <h3 className="text-xl font-bold text-white mb-4">Personalized Insights</h3>
+                <p className="text-gray-400">
+                  Custom analytics that adapt to your specific investment needs
+                </p>
               </div>
             </div>
           </div>
@@ -205,59 +209,58 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 bg-redtools-red">
+      <section className="py-32 bg-gradient-to-r from-redtools-red to-redtools-red-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to make your next move with confidence?
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to make confident
+            <br />
+            real estate decisions?
           </h2>
-          <p className="text-xl text-red-100 mb-8">
-            Just clean, current, real estate data - all overlaid with our proprietary 
-            algorithms to give you the ultimate scores, ranks and insights.
+          <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto">
+            Join investors and agents who trust RedTools for market intelligence
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-redtools-red hover:bg-gray-100 px-8 py-3">
-              Start Free Trial
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-redtools-red px-8 py-3">
-              Schedule Demo
-            </Button>
-          </div>
+          <Button 
+            size="lg" 
+            className="bg-white text-redtools-red hover:bg-gray-100 text-lg px-12 py-4 rounded-full font-semibold"
+          >
+            Get started
+          </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <img 
                 src="https://cdn.builder.io/api/v1/assets/64496b1e452044d89561b3b5a5c1ff83/redtools-logo-257438?format=webp&width=800" 
                 alt="RedTools Logo" 
-                className="h-8 w-auto mb-4 brightness-0 invert"
+                className="h-20 w-auto brightness-0 invert mb-6"
               />
-              <p className="text-gray-400 max-w-md">
+              <p className="text-gray-400 max-w-md text-lg">
                 Real estate intelligence platform turning market chaos into 
                 high-confidence decision-making data.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Product</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="font-semibold text-white mb-6 text-lg">Product</h3>
+              <ul className="space-y-3 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">Analytics</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Reports</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">API</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="font-semibold text-white mb-6 text-lg">Company</h3>
+              <ul className="space-y-3 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">About</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
             <p>&copy; 2024 RedTools. All rights reserved.</p>
           </div>
         </div>
