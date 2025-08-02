@@ -37,11 +37,23 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
+        {/* Background Video */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-black to-redtools-red/20"></div>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source
+              src="https://cdn.builder.io/o/assets%2F64496b1e452044d89561b3b5a5c1ff83%2F9d069bfdece84749a0c47fc92a122dc2?alt=media&token=3ef0f015-e117-4b62-8381-f8e67dae45da&apiKey=64496b1e452044d89561b3b5a5c1ff83"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-black/50 to-redtools-red/30"></div>
           {/* Geometric pattern overlay */}
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-10 w-32 h-32 border border-redtools-red/30 rotate-12"></div>
             <div className="absolute top-40 right-20 w-24 h-24 border border-redtools-red/20 rotate-45"></div>
             <div className="absolute bottom-40 left-1/4 w-20 h-20 border border-redtools-red/25 -rotate-12"></div>
