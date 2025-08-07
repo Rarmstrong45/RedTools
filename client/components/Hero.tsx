@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="absolute bottom-20 right-1/3 w-28 h-28 border border-redtools-red/15 rotate-30"></div>
         </div>
       </div>
-      
+
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-8">
           Find Clarity
@@ -34,10 +34,11 @@ export default function Hero() {
           <span className="text-redtools-red">in the Chaos</span>
         </h1>
         <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Turn real estate market noise into actionable insights with data-driven intelligence.
+          Turn real estate market noise into actionable insights with
+          data-driven intelligence.
         </p>
-        <Button 
-          size="lg" 
+        <Button
+          size="lg"
           className="bg-redtools-red hover:bg-redtools-red-dark text-white text-lg px-12 py-4 rounded-full font-semibold"
         >
           Coming soon

@@ -7,7 +7,11 @@ interface FeatureCardProps {
   description: string;
 }
 
-export default function FeatureCard({ icon: Icon, title, description }: FeatureCardProps) {
+export default function FeatureCard({
+  icon: Icon,
+  title,
+  description,
+}: FeatureCardProps) {
   return (
     <Card className="bg-gray-900 border-gray-800 p-8 hover:bg-gray-850 transition-colors">
       <CardContent className="p-0">
@@ -17,9 +21,7 @@ export default function FeatureCard({ icon: Icon, title, description }: FeatureC
           </div>
           <h3 className="text-2xl font-bold text-white">{title}</h3>
         </div>
-        <p className="text-gray-400 text-lg leading-relaxed">
-          {description}
-        </p>
+        <p className="text-gray-400 text-lg leading-relaxed">{description}</p>
       </CardContent>
     </Card>
   );

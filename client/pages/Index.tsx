@@ -1,5 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BarChart3, TrendingUp, MapPin, Users, Home, Target, PieChart } from "lucide-react";
+import {
+  CheckCircle,
+  BarChart3,
+  TrendingUp,
+  MapPin,
+  Users,
+  Home,
+  Target,
+  PieChart,
+} from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import FeatureCard from "@/components/FeatureCard";
@@ -10,45 +19,50 @@ export default function Index() {
     {
       icon: MapPin,
       title: "Neighborhood Analytics",
-      description: "Zip-code level insights with granular market data that reveals hidden opportunities"
+      description:
+        "Zip-code level insights with granular market data that reveals hidden opportunities",
     },
     {
       icon: BarChart3,
       title: "Proprietary Modeling",
-      description: "Advanced algorithms analyzing vacancy rates, debt loads, and income velocity"
+      description:
+        "Advanced algorithms analyzing vacancy rates, debt loads, and income velocity",
     },
     {
       icon: TrendingUp,
       title: "Investor Intelligence",
-      description: "Airbnb viability scoring, risk analysis, and entertainment district mapping"
+      description:
+        "Airbnb viability scoring, risk analysis, and entertainment district mapping",
     },
     {
       icon: Users,
       title: "Lifestyle Matching",
-      description: "Perfect location discovery for buyers, renters, and remote workers"
-    }
+      description:
+        "Perfect location discovery for buyers, renters, and remote workers",
+    },
   ];
 
   const statsData = [
     { value: "40+", label: "Years Experience" },
     { value: "1000s", label: "Data Points" },
     { value: "0", label: "Sponsored Results" },
-    { value: "100%", label: "Data Driven" }
+    { value: "100%", label: "Data Driven" },
   ];
 
   const differentiationData = [
     {
       title: "No Sponsored Cities",
-      description: "Unbiased results based purely on market data and analytics"
+      description: "Unbiased results based purely on market data and analytics",
     },
     {
       title: "Real-Time Data",
-      description: "No outdated census information - live market intelligence"
+      description: "No outdated census information - live market intelligence",
     },
     {
       title: "Personalized Insights",
-      description: "Custom analytics that adapt to your specific investment needs"
-    }
+      description:
+        "Custom analytics that adapt to your specific investment needs",
+    },
   ];
 
   return (
@@ -66,7 +80,8 @@ export default function Index() {
               <span className="text-redtools-red">simplified</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              40+ years of market experience distilled into powerful analytics tools
+              40+ years of market experience distilled into powerful analytics
+              tools
             </p>
           </div>
 
@@ -89,7 +104,9 @@ export default function Index() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {statsData.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-redtools-red mb-2">{stat.value}</div>
+                <div className="text-4xl lg:text-5xl font-bold text-redtools-red mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-gray-400 text-lg">{stat.label}</div>
               </div>
             ))}
@@ -105,16 +122,16 @@ export default function Index() {
               How we're <span className="text-redtools-red">different</span>
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {differentiationData.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gray-900 rounded-2xl p-8 border border-gray-800">
                   <CheckCircle className="h-12 w-12 text-redtools-red mx-auto mb-6" />
-                  <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-                  <p className="text-gray-400">
-                    {item.description}
-                  </p>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -133,8 +150,8 @@ export default function Index() {
           <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto">
             Join investors and agents who trust RedTools for market intelligence
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-white text-redtools-red hover:bg-gray-100 text-lg px-12 py-4 rounded-full font-semibold"
           >
             Coming soon
