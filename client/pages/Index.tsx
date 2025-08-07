@@ -17,15 +17,15 @@ export default function Index() {
               />
             </div>
             <div className="hidden lg:flex items-center space-x-8">
-              <a href="#features" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Analytics</a>
-              <a href="#about" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Insights</a>
-              <a href="#contact" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Reports</a>
+              <a href="#analytics" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Analytics</a>
+              <a href="#insights" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Insights</a>
+              <a href="#reports" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Reports</a>
               <span className="text-gray-500">|</span>
               <Button variant="ghost" className="text-white hover:bg-gray-800 border border-gray-700 rounded-full px-6">
-                Log in
+                Coming soon
               </Button>
               <Button className="bg-redtools-red hover:bg-redtools-red-dark text-white rounded-full px-6">
-                Get started
+                Coming soon
               </Button>
             </div>
             <div className="lg:hidden">
@@ -70,17 +70,17 @@ export default function Index() {
           <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             Turn real estate market noise into actionable insights with data-driven intelligence.
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-redtools-red hover:bg-redtools-red-dark text-white text-lg px-12 py-4 rounded-full font-semibold"
           >
-            Get started
+            Coming soon
           </Button>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-32 bg-gray-950">
+      <section id="analytics" className="py-32 bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -154,7 +154,7 @@ export default function Index() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-32 bg-black">
+      <section id="insights" className="py-32 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -178,7 +178,7 @@ export default function Index() {
       </section>
 
       {/* Differentiation Section */}
-      <section className="py-32 bg-gray-950">
+      <section id="reports" className="py-32 bg-gray-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -231,11 +231,11 @@ export default function Index() {
           <p className="text-xl text-red-100 mb-12 max-w-2xl mx-auto">
             Join investors and agents who trust RedTools for market intelligence
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-white text-redtools-red hover:bg-gray-100 text-lg px-12 py-4 rounded-full font-semibold"
           >
-            Get started
+            Coming soon
           </Button>
         </div>
       </section>
