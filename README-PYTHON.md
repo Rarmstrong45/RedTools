@@ -12,6 +12,7 @@ This project now uses a Python FastAPI backend with a React TypeScript frontend.
 The current development environment doesn't have Python installed. To fully test the Python backend:
 
 1. **In a local environment with Python:**
+
    - Install Python dependencies: `pip install -r requirements.txt`
    - Run the full stack: `npm run dev:full`
 
@@ -36,6 +37,7 @@ npm install
 ### 3. Environment Setup
 
 Copy the environment example file:
+
 ```bash
 cp .env.example .env
 ```
@@ -45,6 +47,7 @@ Edit `.env` with your configuration values.
 ### 4. Running the Application
 
 #### Option A: Run Both Frontend and Backend Together
+
 ```bash
 npm run dev:full
 ```
@@ -52,6 +55,7 @@ npm run dev:full
 #### Option B: Run Separately
 
 **Backend (Python FastAPI):**
+
 ```bash
 npm run dev:backend
 # or directly:
@@ -59,6 +63,7 @@ python main.py
 ```
 
 **Frontend (React + Vite):**
+
 ```bash
 npm run dev
 ```
