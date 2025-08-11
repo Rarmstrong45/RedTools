@@ -7,6 +7,18 @@ This project now uses a Python FastAPI backend with a React TypeScript frontend.
 - Node.js (for the React frontend)
 - Python 3.8+ (for the FastAPI backend)
 
+## Note for Current Environment
+
+The current development environment doesn't have Python installed. To fully test the Python backend:
+
+1. **In a local environment with Python:**
+   - Install Python dependencies: `pip install -r requirements.txt`
+   - Run the full stack: `npm run dev:full`
+
+2. **In the current environment:**
+   - The React frontend runs independently: `npm run dev`
+   - The API proxy is configured but will show errors until Python backend is running
+
 ## Setup Instructions
 
 ### 1. Install Python Dependencies
