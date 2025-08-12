@@ -5,18 +5,15 @@ export default function WallpaperBackground() {
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: `url("https://cdn.builder.io/api/v1/image/assets%2F7df31d2775f848d39d4a74bab01dcb4a%2F40192f0bb7014f7797764adf6ddeb8b6?format=webp&width=1920")`,
+          backgroundImage: `url("https://cdn.builder.io/api/v1/image/assets%2F7df31d2775f848d39d4a74bab01dcb4a%2F2eb47fbabf8e4053a19f5e94b336b356?format=webp&width=1920")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       />
 
-      {/* Red to Black Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-redtools-red/30 via-redtools-red-dark/50 to-black/90" />
-
-      {/* Additional Gradient for Depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+      {/* Red Top-Right to Black Bottom-Left Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-bl from-redtools-red/40 via-redtools-red-dark/20 to-black/80" />
 
       {/* Logo in Bottom Left Corner */}
       <div className="absolute bottom-8 left-8 z-10">
