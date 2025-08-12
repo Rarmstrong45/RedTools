@@ -3,7 +3,7 @@ export default function WallpaperBackground() {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Flowing Topographic Contour Lines */}
       <div
-        className="absolute inset-0 w-full h-full opacity-25"
+        className="absolute inset-0 w-full h-full opacity-50"
         style={{
           backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(`
             <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
