@@ -43,7 +43,7 @@ export default function WallpaperBackground() {
 
       {/* Additional Detailed Contour Lines */}
       <div
-        className="absolute inset-0 opacity-15"
+        className="absolute inset-0 opacity-35"
         style={{
           backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(`
             <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
