@@ -1,15 +1,15 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BarChart3, TrendingUp, MapPin } from "lucide-react";
+import { CheckCircle, BarChart3, TrendingUp, MapPin, File } from "lucide-react";
 
 export default function ServicesProvided() {
   const services = [
     {
-      icon: MapPin,
-      title: "Market Analysis",
-      description: "Comprehensive neighborhood and zip-code level market analysis with detailed insights into local trends and opportunities.",
-      link: "/market-analysis"
+      icon: File,
+      title: "Property Tax Petition",
+      description: "Give better description later.",
+      link: "/Property-Tax"
     },
     {
       icon: BarChart3,
