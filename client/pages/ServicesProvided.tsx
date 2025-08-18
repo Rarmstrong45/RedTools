@@ -57,9 +57,15 @@ export default function ServicesProvided() {
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 text-lg leading-relaxed">
+                <p className="text-gray-400 text-lg leading-relaxed mb-6">
                   {service.description}
                 </p>
+                <Button
+                  className="bg-redtools-red hover:bg-redtools-red-dark text-white rounded-full px-6"
+                  onClick={() => window.location.href = service.link}
+                >
+                  Learn More
+                </Button>
               </div>
             ))}
           </div>
