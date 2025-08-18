@@ -39,7 +39,7 @@ export default function ServicesProvided() {
       <section className="pt-32 pb-20 bg-gradient-to-b from-black to-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-            Our <span className="text-redtools-red">Services</span>
+            Current <span className="text-redtools-red">Services</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Professional real estate intelligence services backed by 40+ years of market experience and cutting-edge analytics
