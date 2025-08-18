@@ -8,22 +8,26 @@ export default function ServicesProvided() {
     {
       icon: MapPin,
       title: "Market Analysis",
-      description: "Comprehensive neighborhood and zip-code level market analysis with detailed insights into local trends and opportunities."
+      description: "Comprehensive neighborhood and zip-code level market analysis with detailed insights into local trends and opportunities.",
+      link: "/market-analysis"
     },
     {
       icon: BarChart3,
       title: "Property Valuation",
-      description: "Advanced algorithmic property valuation using proprietary models and real-time market data for accurate pricing."
+      description: "Advanced algorithmic property valuation using proprietary models and real-time market data for accurate pricing.",
+      link: "/property-valuation"
     },
     {
       icon: TrendingUp,
-      title: "Investment Consulting", 
-      description: "Strategic investment guidance including risk analysis, ROI projections, and portfolio optimization recommendations."
+      title: "Investment Consulting",
+      description: "Strategic investment guidance including risk analysis, ROI projections, and portfolio optimization recommendations.",
+      link: "/investment-consulting"
     },
     {
       icon: CheckCircle,
       title: "Due Diligence Reports",
-      description: "Thorough property and market due diligence reporting with comprehensive risk assessment and opportunity identification."
+      description: "Thorough property and market due diligence reporting with comprehensive risk assessment and opportunity identification.",
+      link: "/due-diligence-reports"
     }
   ];
 
