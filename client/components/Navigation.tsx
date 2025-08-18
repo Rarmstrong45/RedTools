@@ -33,7 +33,7 @@ export default function Navigation() {
               Reports
             </a>
             <a
-              href="/Services-Provided"
+              href="/ServicesProvided"
               className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
             >
               Services
