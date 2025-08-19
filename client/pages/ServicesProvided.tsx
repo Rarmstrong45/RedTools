@@ -1,19 +1,19 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BarChart3, TrendingUp, MapPin, File } from "lucide-react";
+import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House } from "lucide-react";
 
 export default function ServicesProvided() {
   const services = [
     {
       icon: File,
-      title: "Property Tax Petition",
+      title: "Fair Value",
       description: "Give better description later.",
       link: "/Property-Tax"
     },
     {
-      icon: BarChart3,
-      title: "Cash Grab 2",
+      icon: House,
+      title: "How's the Grass",
       description: "Advanced algorithmic property valuation using proprietary models and real-time market data for accurate pricing.",
       link: "/property-valuation"
     },
