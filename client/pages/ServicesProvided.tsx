@@ -13,19 +13,19 @@ export default function ServicesProvided() {
     },
     {
       icon: BarChart3,
-      title: "Property Valuation",
+      title: "Cash Grab 2",
       description: "Advanced algorithmic property valuation using proprietary models and real-time market data for accurate pricing.",
       link: "/property-valuation"
     },
     {
       icon: TrendingUp,
-      title: "Investment Consulting",
+      title: "Cash Grab 3",
       description: "Strategic investment guidance including risk analysis, ROI projections, and portfolio optimization recommendations.",
       link: "/investment-consulting"
     },
     {
       icon: CheckCircle,
-      title: "Due Diligence Reports",
+      title: "Cash Grab 4",
       description: "Thorough property and market due diligence reporting with comprehensive risk assessment and opportunity identification.",
       link: "/due-diligence-reports"
     }
