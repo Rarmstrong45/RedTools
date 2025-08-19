@@ -1,7 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/use-auth";
 
 export default function Navigation() {
+  const navigate = useNavigate();
+  const { user, logout } = useAuth();
+
+  const handleAuthAction = () => {
+    if (user) {
+      logout();
+    } else {
+      navigate("/log-in");
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,8 +58,11 @@ export default function Navigation() {
             >
               Coming soon
             </Button>
-            <Button className="bg-redtools-red hover:bg-redtools-red-dark text-white rounded-full px-6">
-              Coming soon
+            <Button
+              className="bg-redtools-red hover:bg-redtools-red-dark text-white rounded-full px-6"
+              onClick={handleAuthAction}
+            >
+              {user ? user.name : "Log In"}
             </Button>
           </div>
           <div className="lg:hidden">
