@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House, Wrench } from "lucide-react";
+import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House, Wrench, Fence } from "lucide-react";
 
 export default function ServicesProvided() {
   const services = [
@@ -12,7 +12,7 @@ export default function ServicesProvided() {
       link: "/Property-Tax"
     },
     {
-      icon: House,
+      icon: Fence,
       title: "How's the Grass",
       description: "Advanced algorithmic property valuation using proprietary models and real-time market data for accurate pricing.",
       link: "/property-valuation"
