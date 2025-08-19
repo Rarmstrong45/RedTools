@@ -129,7 +129,7 @@ export default function ServicesProvided() {
             size="lg"
             className="bg-white text-redtools-red hover:bg-gray-100 text-lg px-12 py-4 rounded-full font-semibold"
           >
-            Contact Us Today
+            Sign Up
           </Button>
         </div>
       </section>
