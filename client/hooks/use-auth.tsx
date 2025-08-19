@@ -140,9 +140,42 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const updateProfile = async (profileData: Partial<User>): Promise<boolean> => {
+    setIsLoading(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      if (user) {
+        const updatedUser = { ...user, ...profileData };
+        setUser(updatedUser);
+        localStorage.setItem('user', JSON.stringify(updatedUser));
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error('Profile update failed:', error);
+      return false;
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const addOrder = (order: Omit<Order, 'id'>) => {
+    const newOrder: Order = {
+      ...order,
+      id: `order-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+    };
+    const updatedOrders = [newOrder, ...orders];
+    setOrders(updatedOrders);
+    localStorage.setItem('orders', JSON.stringify(updatedOrders));
+  };
+
   const logout = () => {
     setUser(null);
+    setOrders([]);
     localStorage.removeItem('user');
+    localStorage.removeItem('orders');
   };
 
   const value: AuthContextType = {
