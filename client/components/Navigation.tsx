@@ -20,11 +20,17 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
-            <img
-              src="https://cdn.builder.io/api/v1/assets/64496b1e452044d89561b3b5a5c1ff83/redtools-logo-257438?format=webp&width=800"
-              alt="RedTools Logo"
-              className="h-20 w-auto brightness-0 invert"
-            />
+            <button
+              onClick={() => navigate("/")}
+              className="focus:outline-none focus:ring-2 focus:ring-redtools-red rounded-lg transition-transform hover:scale-105"
+              aria-label="Go to home page"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/assets/64496b1e452044d89561b3b5a5c1ff83/redtools-logo-257438?format=webp&width=800"
+                alt="RedTools Logo"
+                className="h-20 w-auto brightness-0 invert"
+              />
+            </button>
           </div>
           <div className="hidden lg:flex items-center space-x-8">
             <a
