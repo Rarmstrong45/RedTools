@@ -158,8 +158,7 @@ export default function Profile() {
                     ) : (
                       <Button
                         onClick={() => setIsEditing(true)}
-                        variant="outline"
-                        className="border-gray-600 text-white hover:bg-gray-800"
+                        className="bg-gray-800 hover:bg-gray-700 text-white border border-gray-600"
                       >
                         <Edit3 className="h-4 w-4 mr-2" />
                         Edit
