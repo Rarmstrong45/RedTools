@@ -38,13 +38,18 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
+  const [orders, setOrders] = useState<Order[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   // Check for existing session on mount
   useEffect(() => {
     const savedUser = localStorage.getItem('user');
+    const savedOrders = localStorage.getItem('orders');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
+    }
+    if (savedOrders) {
+      setOrders(JSON.parse(savedOrders));
     }
   }, []);
 
