@@ -5,6 +5,21 @@ export interface User {
   name: string;
   email: string;
   avatar?: string;
+  phone?: string;
+  address?: string;
+  city?: string;
+  state?: string;
+  zipCode?: string;
+  bio?: string;
+}
+
+export interface Order {
+  id: string;
+  serviceName: string;
+  price: number;
+  date: string;
+  status: 'completed' | 'pending' | 'cancelled';
+  description?: string;
 }
 
 interface AuthContextType {
