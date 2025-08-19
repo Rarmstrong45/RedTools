@@ -32,6 +32,12 @@ export default function Navigation() {
             >
               Reports
             </a>
+            <a
+              href="/ServicesProvided"
+              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              Services
+            </a>
             <span className="text-gray-500">|</span>
             <Button
               variant="ghost"
