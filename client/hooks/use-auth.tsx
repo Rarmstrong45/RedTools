@@ -69,6 +69,39 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       
       setUser(mockUser);
       localStorage.setItem('user', JSON.stringify(mockUser));
+
+      // Add some mock orders for demonstration (only on first login)
+      if (orders.length === 0) {
+        const mockOrders: Order[] = [
+          {
+            id: 'order-demo-1',
+            serviceName: 'Analytics Dashboard Premium',
+            price: 99.99,
+            date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(), // 7 days ago
+            status: 'completed',
+            description: 'Full access to advanced analytics tools and reporting features'
+          },
+          {
+            id: 'order-demo-2',
+            serviceName: 'Data Insights Report',
+            price: 49.99,
+            date: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString(), // 14 days ago
+            status: 'completed',
+            description: 'Custom data analysis and insights report for your business'
+          },
+          {
+            id: 'order-demo-3',
+            serviceName: 'RedTools Consultation',
+            price: 199.99,
+            date: new Date().toISOString(), // Today
+            status: 'pending',
+            description: 'One-on-one consultation with our data experts'
+          }
+        ];
+        setOrders(mockOrders);
+        localStorage.setItem('orders', JSON.stringify(mockOrders));
+      }
+
       return true;
     } catch (error) {
       console.error('Login failed:', error);
