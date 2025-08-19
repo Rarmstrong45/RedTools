@@ -180,9 +180,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const value: AuthContextType = {
     user,
+    orders,
     login,
     loginWithSSO,
     signup,
+    updateProfile,
+    addOrder,
     logout,
     isLoading
   };
