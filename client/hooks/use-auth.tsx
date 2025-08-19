@@ -10,7 +10,7 @@ export interface User {
 interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<boolean>;
-  loginWithSSO: (provider: 'apple' | 'microsoft') => Promise<boolean>;
+  loginWithSSO: (provider: 'apple' | 'microsoft' | 'google') => Promise<boolean>;
   signup: (name: string, email: string, password: string) => Promise<boolean>;
   logout: () => void;
   isLoading: boolean;
@@ -55,17 +55,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const loginWithSSO = async (provider: 'apple' | 'microsoft'): Promise<boolean> => {
+  const loginWithSSO = async (provider: 'apple' | 'microsoft' | 'google'): Promise<boolean> => {
     setIsLoading(true);
     try {
       // Simulate SSO flow
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       // Mock successful SSO login
+      const providerNames = {
+        apple: 'Apple',
+        microsoft: 'Microsoft',
+        google: 'Google'
+      };
+
+      const providerEmails = {
+        apple: 'icloud.com',
+        microsoft: 'outlook.com',
+        google: 'gmail.com'
+      };
+
       const mockUser: User = {
         id: '1',
-        name: `${provider === 'apple' ? 'Apple' : 'Microsoft'} User`,
-        email: `user@${provider === 'apple' ? 'icloud.com' : 'outlook.com'}`,
+        name: `${providerNames[provider]} User`,
+        email: `user@${providerEmails[provider]}`,
         avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${provider}`
       };
       
