@@ -9,7 +9,7 @@ export default function Navigation() {
 
   const handleAuthAction = () => {
     if (user) {
-      logout();
+      navigate("/profile");
     } else {
       navigate("/log-in");
     }
