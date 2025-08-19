@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Wallpaper from "./pages/Wallpaper";
 import ServicesProvided from "./pages/ServicesProvided";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 
 const queryClient = new QueryClient();
 
