@@ -1,31 +1,31 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House, Wrench, Fence, Truck } from "lucide-react";
+import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House, Wrench, Fence, Truck, Hammer } from "lucide-react";
 
 export default function ServicesProvided() {
   const services = [
     {
       icon: Wrench,
-      title: "RedTools",
+      title: "RedTools Pro",
       description: "Give better description later.",
       link: "/Property-Tax"
     },
     {
-      icon: Wrench,
-      title: "Redtools PRO",
+      icon: File,
+      title: "Fair Value",
       description: "Advanced algorithmic property valuation using proprietary models and real-time market data for accurate pricing.",
       link: "/property-valuation"
     },
     {
-      icon: Truck,
-      title: "How's the Grass",
+      icon: Hammer,
+      title: "RedTools",
       description: "Strategic investment guidance including risk analysis, ROI projections, and portfolio optimization recommendations.",
       link: "/investment-consulting"
     },
     {
-      icon: File,
-      title: "Fair Value",
+      icon: Truck,
+      title: "How's the Grass",
       description: "Thorough property and market due diligence reporting with comprehensive risk assessment and opportunity identification.",
       link: "/due-diligence-reports"
     }
