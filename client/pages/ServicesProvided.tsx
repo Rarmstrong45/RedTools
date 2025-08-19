@@ -6,26 +6,26 @@ import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House, Wrench, Fence,
 export default function ServicesProvided() {
   const services = [
     {
-      icon: File,
-      title: "Fair Value",
+      icon: Wrench,
+      title: "RedTools",
       description: "Give better description later.",
       link: "/Property-Tax"
     },
     {
-      icon: Truck,
-      title: "How's the Grass",
+      icon: Wrench,
+      title: "Redtools PRO",
       description: "Advanced algorithmic property valuation using proprietary models and real-time market data for accurate pricing.",
       link: "/property-valuation"
     },
     {
-      icon: Wrench,
-      title: "RedTools",
+      icon: Truck,
+      title: "How's the Grass",
       description: "Strategic investment guidance including risk analysis, ROI projections, and portfolio optimization recommendations.",
       link: "/investment-consulting"
     },
     {
-      icon: CheckCircle,
-      title: "Cash Grab 4",
+      icon: File,
+      title: "Fair Value",
       description: "Thorough property and market due diligence reporting with comprehensive risk assessment and opportunity identification.",
       link: "/due-diligence-reports"
     }
