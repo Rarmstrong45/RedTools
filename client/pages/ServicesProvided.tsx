@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House } from "lucide-react";
+import { CheckCircle, BarChart3, TrendingUp, MapPin, File, House, Wrench } from "lucide-react";
 
 export default function ServicesProvided() {
   const services = [
@@ -18,8 +18,8 @@ export default function ServicesProvided() {
       link: "/property-valuation"
     },
     {
-      icon: TrendingUp,
-      title: "Cash Grab 3",
+      icon: Wrench,
+      title: "RedTools",
       description: "Strategic investment guidance including risk analysis, ROI projections, and portfolio optimization recommendations.",
       link: "/investment-consulting"
     },
