@@ -24,9 +24,12 @@ export interface Order {
 
 interface AuthContextType {
   user: User | null;
+  orders: Order[];
   login: (email: string, password: string) => Promise<boolean>;
   loginWithSSO: (provider: 'apple' | 'microsoft' | 'google') => Promise<boolean>;
   signup: (name: string, email: string, password: string) => Promise<boolean>;
+  updateProfile: (profileData: Partial<User>) => Promise<boolean>;
+  addOrder: (order: Omit<Order, 'id'>) => void;
   logout: () => void;
   isLoading: boolean;
 }
