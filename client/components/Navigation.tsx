@@ -1,17 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/use-auth";
 
 export default function Navigation() {
+  const navigate = useNavigate();
+  const { user, logout } = useAuth();
+
+  const handleAuthAction = () => {
+    if (user) {
+      navigate("/profile");
+    } else {
+      navigate("/log-in");
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
-            <img
-              src="https://cdn.builder.io/api/v1/assets/64496b1e452044d89561b3b5a5c1ff83/redtools-logo-257438?format=webp&width=800"
-              alt="RedTools Logo"
-              className="h-20 w-auto brightness-0 invert"
-            />
+            <button
+              onClick={() => navigate("/")}
+              className="focus:outline-none focus:ring-2 focus:ring-redtools-red rounded-lg transition-transform hover:scale-105"
+              aria-label="Go to home page"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/assets/64496b1e452044d89561b3b5a5c1ff83/redtools-logo-257438?format=webp&width=800"
+                alt="RedTools Logo"
+                className="h-20 w-auto brightness-0 invert"
+              />
+            </button>
           </div>
           <div className="hidden lg:flex items-center space-x-8">
             <a
@@ -45,8 +64,11 @@ export default function Navigation() {
             >
               Coming soon
             </Button>
-            <Button className="bg-redtools-red hover:bg-redtools-red-dark text-white rounded-full px-6">
-              Coming soon
+            <Button
+              className="bg-redtools-red hover:bg-redtools-red-dark text-white rounded-full px-6"
+              onClick={handleAuthAction}
+            >
+              {user ? user.name : "Log In"}
             </Button>
           </div>
           <div className="lg:hidden">
