@@ -12,10 +12,8 @@ export default function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source
-            src="https://cdn.builder.io/o/assets%2F64496b1e452044d89561b3b5a5c1ff83%2F9d069bfdece84749a0c47fc92a122dc2?alt=media&token=3ef0f015-e117-4b62-8381-f8e67dae45da&apiKey=64496b1e452044d89561b3b5a5c1ff83"
-            type="video/mp4"
-          />
+          <source src="/videos/hero-background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-black/50 to-redtools-red/30"></div>
         {/* Geometric pattern overlay */}
