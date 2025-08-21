@@ -5,16 +5,13 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <iframe
+          src="https://player.vimeo.com/video/1112021062?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
           className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          style={{ pointerEvents: 'none' }}
+        ></iframe>
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-black/50 to-redtools-red/30"></div>
         {/* Geometric pattern overlay */}
         <div className="absolute inset-0 opacity-10">
