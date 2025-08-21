@@ -7,13 +7,20 @@ export default function Hero() {
       <div className="absolute inset-0">
         <iframe
           src="https://www.youtube.com/embed/sbUFN2o880M?autoplay=1&mute=1&loop=1&playlist=sbUFN2o880M&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-          className="absolute inset-0 w-full h-full"
+          className="absolute"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           style={{
             pointerEvents: "none",
-            minWidth: "100%",
-            minHeight: "100%",
+            width: "100vw",
+            height: "100vh",
+            border: "none",
+            margin: 0,
+            padding: 0,
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            objectFit: "cover"
           }}
         ></iframe>
         {/* Cover YouTube watermark */}
