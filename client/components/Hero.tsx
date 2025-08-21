@@ -12,6 +12,8 @@ export default function Hero() {
           allow="autoplay; fullscreen; picture-in-picture"
           style={{ pointerEvents: 'none' }}
         ></iframe>
+        {/* Cover YouTube watermark */}
+        <div className="absolute bottom-4 right-4 w-16 h-8 bg-black/90 z-5"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-black/50 to-redtools-red/30"></div>
         {/* Geometric pattern overlay */}
         <div className="absolute inset-0 opacity-10">
