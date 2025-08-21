@@ -11,9 +11,9 @@ export default function Hero() {
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           style={{
-            pointerEvents: 'none',
-            minWidth: '100%',
-            minHeight: '100%'
+            pointerEvents: "none",
+            minWidth: "100%",
+            minHeight: "100%",
           }}
         ></iframe>
         {/* Cover YouTube watermark */}
