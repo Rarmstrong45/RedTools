@@ -2,19 +2,22 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          src="https://www.youtube.com/embed/sbUFN2o880M?autoplay=1&mute=1&loop=1&playlist=sbUFN2o880M&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+          className="absolute inset-0 w-full h-full"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          style={{
+            pointerEvents: "none",
+            minWidth: "100%",
+            minHeight: "100%",
+          }}
+        ></iframe>
+        {/* Cover YouTube watermark */}
+        <div className="absolute bottom-4 right-4 w-16 h-8 bg-black/90 z-5"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-black/50 to-redtools-red/30"></div>
         {/* Geometric pattern overlay */}
         <div className="absolute inset-0 opacity-10">
